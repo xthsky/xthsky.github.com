@@ -1,0 +1,52 @@
+---
+layout: page
+---
+
+<!doctype html>
+<meta charset="utf-8">
+<title>{{ site.title }}</title>
+<link rel="stylesheet" href="/assets/brix-min.css">
+<style>
+    body {
+        background: #aaa;
+    }
+    h1,
+    h3 {
+        color: #000;
+        margin-bottom: 0;
+    }
+    h1 a,
+    h1 a:visited,
+    h3 a,
+    h3 a:visited {
+        color: #333;
+    }
+    #header,
+    .post {
+        overflow: hidden;
+        padding: 0 30px 0 40px;
+        width: 790px;
+        background: #fff;
+        box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.8);
+    }
+    .meta {
+        margin: 0;
+        color: #888;
+    }
+    .content {
+        font-size: 14px;
+        line-height: 24px;
+    }
+</style>
+
+<div id="header">
+    <h1><a href="{{ site.url }}">{{ site.title }}</a></h1>
+    <img src="/assets/shore.jpeg">
+</div>
+
+<div class="post">
+    <h3>{{ page.title }}</h3>
+    <p class="meta">发表于 <a class="date" href="{{ page.url }}">{{ page.date | date_to_string }}</a> 由 <a class="author" href="">{{ page.author }}</a></p>
+    <div class="content">{{ content }}</div>
+    <p>此条目发表在 <a class="category" href="{{ page.url }}">{{ page.categories }}</a> 分类目录，贴了 <a class="tag" href="">{{ page.tags }}</a> 标签。</p>
+</div>
